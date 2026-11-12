@@ -2,7 +2,12 @@
 
 Lists your open windows, lets you pick one, and spams the `Enter` keystroke to it until the window closes (or you press Ctrl+C).
 
-# Quickstart
+## Dependencies
+
+- **macOS:** Xcode Command Line Tools (`xcode-select --install`). The first run will ask for Accessibility permission for your terminal (`System Settings > Privacy & Security > Accessibility`).
+- **Windows 11:** Download [w64devkit](https://github.com/skeeto/w64devkit/releases) (portable, no install — includes `gcc` and `make`), extract it, and run `w64devkit.exe`. Run the Quickstart commands in that console (it has no `git`, so grab the repo as a zip via GitHub's **Code > Download ZIP** if you don't have git installed).
+
+## Quickstart
 
 Clone the repo and `cd` into it:
 
@@ -17,10 +22,6 @@ To run the script, run either:
 - `make win11 200`
 
 where `200` is the ms delay between the keystroke `Enter` sent to the selected window (optional — defaults to 200).
-
-**Prerequisites**
-- **macOS:** Xcode Command Line Tools (`xcode-select --install`). The first run will ask for Accessibility permission for your terminal (System Settings → Privacy & Security → Accessibility).
-- **Windows 11:** `make` and MinGW `gcc`, e.g. via [MSYS2](https://www.msys2.org/) or Git Bash with mingw-w64.
 
 ```
 ./build/autoclicker
